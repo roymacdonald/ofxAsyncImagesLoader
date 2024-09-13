@@ -2,6 +2,16 @@
 # general patterns
 #########################
 
+example/Makefile
+example/Project.xcconfig
+example/config.make
+example/example.xcodeproj/project.pbxproj
+example/example.xcodeproj/xcshareddata/xcschemes/example Debug.xcscheme
+example/example.xcodeproj/xcshareddata/xcschemes/example Release.xcscheme
+example/of.entitlements
+example/openFrameworks-Info.plist
+
+
 docs/html
 docs/tagfile.xml
 
