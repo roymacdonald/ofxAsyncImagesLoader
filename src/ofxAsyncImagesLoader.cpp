@@ -18,9 +18,10 @@ void ofxAsyncImagesLoader::start(bool bBlocking){
         ofLogError("ofxAsyncImagesLoader::start") << "you first need to add images to load before calling start";
         return;
     }
-    
+    ofLogVerbose("ofxAsyncImagesLoader::start") << "blocking: " << std::boolalpha << bBlocking;
     
     if(!bBlocking){
+        
         updateListener = ofEvents().update.newListener( this, &ofxAsyncImagesLoader::update);
     }
     // Launch threads based on hardware concurrency
@@ -46,6 +47,7 @@ ofxAsyncImagesLoader::~ofxAsyncImagesLoader(){
 
 //--------------------------------------------------------------
 void ofxAsyncImagesLoader::close(){
+    
     images_to_load_from_disk.close();
     images_to_update.close();
     for (std::thread& worker : workers) {

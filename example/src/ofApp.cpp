@@ -29,8 +29,10 @@ void ofApp::loadAsyncImgs(string dirpath){
     allLoadedListener =  loader->allLoadedEvent.newListener(this, &ofApp::imgsLoadedCallback);
 #endif
     loader->start(bBlockingLoaded);
-    imgsLoadedCallback();
-    
+
+    if(bBlockingLoaded){
+        imgsLoadedCallback();
+    }
 }
 
 //--------------------------------------------------------------

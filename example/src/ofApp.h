@@ -4,7 +4,7 @@
 #include "ofxAsyncImagesLoader.h"
 
 //Uncomment the following line to use the nonblocking loader
-#define USE_NON_BLOCKING_LOADER
+//#define USE_NON_BLOCKING_LOADER
 
 class ofApp : public ofBaseApp{
 
